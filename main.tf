@@ -100,12 +100,12 @@ resource "aws_security_group" "aws_SG" {
   }
 }
 
-resource "aws_instance" "first-machine" {
-  ami                         = "ami-0d5eff06f840b45e9"
-  instance_type               = "t2.micro"
-  vpc_security_group_ids      = [aws_security_group.aws_SG.id]
-  subnet_id                   = "subnet-06aa9e8486508ffdd"
-  associate_public_ip_address = true
-  provisioner "local-exec" {command = "echo hello > hello.txt"}
-  tags = {Name = "HelloWorld"}
-}
+#resource "aws_instance" "first-machine" {
+#  ami                         = "ami-0d5eff06f840b45e9"
+#  instance_type               = "t2.micro"
+#  vpc_security_group_ids      = [aws_security_group.aws_SG.id]
+#  subnet_id                   = "subnet-06aa9e8486508ffdd"
+#  associate_public_ip_address = true
+#  provisioner "local-exec" {command = "echo hello > hello.txt"}
+#  tags = {Name = "HelloWorld"}
+#}
