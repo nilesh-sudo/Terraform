@@ -1,0 +1,16 @@
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: hashicorp/terraform-github-actions@master
+      with:
+        access_key_id: AKIA5DMGJRCSBUEMBFBX
+        secret_access_key: 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
+        account_id: 900614162596
+        repo: docker/repo
+        region: ap-northeast-2
+        tags: latest,${{ github.sha }}
+        create_repo: true
+        set_repo_policy: true
+        repo_policy_file: repo-policy.json
