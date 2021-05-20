@@ -31,7 +31,7 @@ jobs:
          aws-region: ${{ secrets.us-east-1 }}
          
       - name: Login to Amazon ECR
-        id: login-ecr
+        id: cloud_user
         uses: aws-actions/amazon-ecr-login@v1
       
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
