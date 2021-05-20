@@ -28,12 +28,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-         docker build --tag my-image:v2 . 
-      - name: Push to ECR
-        id: ecr
-        uses: nilesh-sudo/Terraform@master
-        with:
-          access-key-id: ${{ secrets.AKIAY7O5Z2NGMKKT7P4R }}
-          secret-access-key: ${{ secrets.nZd96K4TxUEmAZOZ7OJ9pCiRbA8mOuUglOOE69yR }}
-          region: us-east-1
-          image: my-image:v2
+         docker build --tag my-image:v2 .
+         docker tag my-image:v2 617329840972.dkr.ecr.us-east-1.amazonaws.com/aws-repo:v2
+         docker push 617329840972.dkr.ecr.us-east-1.amazonaws.com/aws-repo:v2
