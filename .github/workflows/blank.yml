@@ -1,17 +1,10 @@
 jobs:
-  build-and-push:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - uses: hashicorp/terraform-github-actions@master
-      with:
-        access_key_id: AKIA5DMGJRCSBUEMBFBX
-        secret_access_key: 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
-        account_id: 900614162596
-        repo: docker/repo
-        region: us-east-1
-        tags: latest,${{ github.sha }}
-        create_repo: true
-        set_repo_policy: true
-        repo_policy_file: repo-policy.json
-        docker build -t test:1.0 .
+ - run: docker build --tag my-image:v1 .
+ - name: Push to ECR
+   id: ecr
+   uses: aws/terraform-github-actions@master
+   with:
+      access-key-id: ${{ secrets.AKIA5DMGJRCSBUEMBFBX }}
+      secret-access-key: ${{ secrets.Nvj3PiJi7q7P4mHFM3p9CgXJ6Sq5VmOQ4y/oYw1D }}
+      region: us-east-1
+       image: my-image:v1
