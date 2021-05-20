@@ -15,9 +15,7 @@ RUN mv terraform /usr/local/bin/
 RUN terraform --version
 RUN cd /tmp
 RUN git clone https://github.com/nilesh-sudo/Terraform.git
-RUN ls
-RUN cd Terraform
-RUN file Terraform
+RUN find / -name main.tf -print
 RUN terraform init
 RUN terraform plan
 RUN terraform apply --auto-approve
