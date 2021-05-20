@@ -31,7 +31,7 @@ jobs:
          docker build --tag my-image:v2 . 
       - name: Push to ECR
         id: ecr
-        uses: nilesh-sudo/Terraform@v2
+        uses: nilesh-sudo/Terraform@master
         with:
           access-key-id: ${{ secrets.AKIAY7O5Z2NGMKKT7P4R }}
           secret-access-key: ${{ secrets.nZd96K4TxUEmAZOZ7OJ9pCiRbA8mOuUglOOE69yR }}
