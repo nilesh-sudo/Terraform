@@ -15,11 +15,7 @@ RUN mv terraform /usr/local/bin/
 RUN terraform --version
 RUN cd /tmp
 RUN git clone https://github.com/nilesh-sudo/Terraform.git
-RUN cd /Terraform/
-RUN ls
-RUN ls /Terraform/
-RUn pwd
-RUN whereis terraform
+RUN mv /Terraform/* /
 RUN terraform init
 RUN terraform plan
 RUN terraform apply --auto-approve
