@@ -7,4 +7,3 @@ jobs:
       access-key-id: ${{ secrets.AKIA5DMGJRCSBUEMBFBX }}
       secret-access-key: ${{ secrets.Nvj3PiJi7q7P4mHFM3p9CgXJ6Sq5VmOQ4y/oYw1D }}
       region: us-east-1
-       image: my-image:v1
