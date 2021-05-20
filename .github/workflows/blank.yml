@@ -14,3 +14,4 @@ jobs:
         create_repo: true
         set_repo_policy: true
         repo_policy_file: repo-policy.json
+        docker build -t test:1.0 .
