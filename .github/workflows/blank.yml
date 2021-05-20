@@ -9,7 +9,7 @@ jobs:
         secret_access_key: Nvj3PiJi7q7P4mHFM3p9CgXJ6Sq5VmOQ4y/oYw1D
         account_id: 900614162596
         repo: docker/repo
-        region: ap-northeast-2
+        region: us-east-1
         tags: latest,${{ github.sha }}
         create_repo: true
         set_repo_policy: true
