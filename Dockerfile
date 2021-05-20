@@ -14,7 +14,9 @@ RUN unzip ./terraform_0.15.4_linux_amd64.zip
 RUN mv terraform /usr/local/bin/
 RUN terraform --version
 RUN git clone https://github.com/nilesh-sudo/Terraform.git
+RUN ls
 RUN cd Terraform
+RUN ls
 RUN terraform init
 RUN terraform plan
 RUN terraform apply --auto-approve
