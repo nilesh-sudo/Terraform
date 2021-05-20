@@ -27,7 +27,15 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Hello, world!
+        run: |
+          RUN mkdir /usr/local/terraform
+          RUN apt-get update -y
+          RUN apt-get install build-essential git wget -y
+          RUN apt-get install unzip -y
+          RUN wget https://releases.hashicorp.com/terraform/0.15.4/terraform_0.15.4_linux_amd64.zip
+          RUN unzip ./terraform_0.15.4_linux_amd64.zip
+          RUN mv terraform /usr/local/bin/
+          RUN terraform --version    
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
