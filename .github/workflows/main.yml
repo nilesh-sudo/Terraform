@@ -40,9 +40,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
-         echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
-#         docker build --tag my-image:v2 .
+         docker build -t docker build --tag my-image:v2 .
+         docker image list
 #         docker tag my-image:v2 666489400496.dkr.ecr.us-east-1.amazonaws.com/aws-repository:v2
 #         docker push 617329840972.dkr.ecr.us-east-1.amazonaws.com/aws-repo/v2
