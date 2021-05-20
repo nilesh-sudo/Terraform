@@ -21,3 +21,15 @@ jobs:
           args: '-var-file="terraform.tfvars"'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: 'Checkout'
+        uses: actions/checkout@master
+      - name: 'Terraform validat'
+        uses: hashicorp/terraform-github-actions@master
+        with:
+          tf_actions_version: 0.15.3
+          tf_actions_subcommand: 'validate'
+          tf_actions_working_dir: '.'
+          tf_actions_comment: true
+          args: '-var-file="terraform.tfvars"'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
