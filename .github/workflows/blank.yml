@@ -1,5 +1,0 @@
-jobs:
- - run: docker build --tag my-image:v1 .
- - name: Push to ECR
-   id: ecr
-   uses: aws/terraform-github-actions@master
