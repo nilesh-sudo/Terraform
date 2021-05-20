@@ -15,7 +15,7 @@ RUN mv terraform /usr/local/bin/
 RUN terraform --version
 RUN git clone https://github.com/nilesh-sudo/Terraform.git
 RUN ls
-RUN cd Terraform/Terraform
+RUN cd Terraform
 RUN ls
 RUN terraform init
 RUN terraform plan
