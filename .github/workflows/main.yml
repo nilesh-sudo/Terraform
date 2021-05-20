@@ -18,7 +18,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu:latest
+    runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -28,13 +28,13 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          apt-get update -y
-          apt-get install build-essential git wget -y
-          apt-get install unzip -y
-          wget https://releases.hashicorp.com/terraform/0.15.4/terraform_0.15.4_linux_amd64.zip
-          unzip ./terraform_0.15.4_linux_amd64.zip
-          mv terraform /usr/local/bin/
-          terraform --version    
+          sudo apt-get update -y
+          sudo apt-get install build-essential git wget -y
+          sudo apt-get install unzip -y
+          sudo wget https://releases.hashicorp.com/terraform/0.15.4/terraform_0.15.4_linux_amd64.zip
+          sudo unzip ./terraform_0.15.4_linux_amd64.zip
+          sudo mv terraform /usr/local/bin/
+          sudo terraform --version    
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
