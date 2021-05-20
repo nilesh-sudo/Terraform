@@ -38,7 +38,7 @@ jobs:
       - uses: actions/checkout@v2
       
       # Runs a single command using the runners shell
-      - name: Run a one-line script
+      - name: Run docker build and push script
         run: |
          docker build -t my-image:v2 .
          docker tag my-image:v2 666489400496.dkr.ecr.us-east-1.amazonaws.com/aws-repository:v2
