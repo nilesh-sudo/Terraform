@@ -42,5 +42,5 @@ jobs:
         run: |
          docker build -t my-image:v2 .
          docker image list
-#         docker tag my-image:v2 666489400496.dkr.ecr.us-east-1.amazonaws.com/aws-repository:v2
-#         docker push 617329840972.dkr.ecr.us-east-1.amazonaws.com/aws-repo/v2
+         docker tag my-image:v2 666489400496.dkr.ecr.us-east-1.amazonaws.com/aws-repository:v2
+         docker push 617329840972.dkr.ecr.us-east-1.amazonaws.com/aws-repo/v2
