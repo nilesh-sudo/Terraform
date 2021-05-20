@@ -27,7 +27,11 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: |
-         docker build --tag my-image:v2 .
-         docker tag my-image:v2 617329840972.dkr.ecr.us-east-1.amazonaws.com/aws-repo:v2
-         docker push 617329840972.dkr.ecr.us-east-1.amazonaws.com/aws-repo:v2
+        with:
+         access-key-id: ${{ secrets.AKIAY7O5Z2NGMQLJKHPQ }}
+         secret-access-key: ${{ secrets.cfAnuEIkpBCUhVxxhKOUkUUPpz2v10HGWAztDGvI }}
+         region: us-east-1
+         run: |
+          docker build --tag my-image:v2 .
+          docker tag my-image:v2 617329840972.dkr.ecr.us-east-1.amazonaws.com/aws-repo:v2
+          docker push 617329840972.dkr.ecr.us-east-1.amazonaws.com/aws-repo:v2
