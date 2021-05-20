@@ -12,7 +12,7 @@ jobs:
       - name: 'Checkout'
         uses: actions/checkout@v2
       - name: 'Terraform Init'
-        uses: hashicorp/terraform-github-actions@v2
+        uses: hashicorp/terraform-github-actions@master
         with:
           tf_actions_version: 0.15.3
           tf_actions_subcommand: 'init'
