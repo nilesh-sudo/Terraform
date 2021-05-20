@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: github to docker-hub
 
 # Controls when the action will run. 
 on:
@@ -36,4 +36,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: my-docker-hub-namespace/my-docker-hub-repository:latest
+          tags: 112125112125/docker-hub:latest
