@@ -21,3 +21,5 @@ jobs:
           args: '-var-file="terraform.tfvars"'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    script:
+    - sleep 10
