@@ -109,5 +109,3 @@ resource "aws_instance" "first-machine" {
   provisioner "local-exec" {command = "echo hello > hello.txt"}
   tags = {Name = "HelloWorld"}
 }
-
-# teesst
